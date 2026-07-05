@@ -27,7 +27,7 @@ micro_wake_word:
     - model: https://raw.githubusercontent.com/Loic760/microwakeword-keywords/main/models/koo_pah/koo_pah.json
 ```
 
-Do not use a normal GitHub `blob` page URL. ESPHome supports the `github://` shorthand above and full raw URLs.
+Do not use a normal GitHub `blob` page URL. ESPHome supports full raw URLs and the `github://` shorthand below.
 
 The full raw URLs are:
 
