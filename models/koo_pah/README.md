@@ -14,7 +14,7 @@ will break the model.
 
        micro_wake_word:
          models:
-           - model: github://Loic760/microwakeword-keywords/models/koo_pah/koo_pah.json@main
+           - model: https://raw.githubusercontent.com/Loic760/microwakeword-keywords/main/models/koo_pah/koo_pah.json
 
 2. Recompile and flash: esphome run your_device.yaml
 
@@ -28,7 +28,7 @@ can also override these in ESPHome YAML:
 
       micro_wake_word:
         models:
-          - model: github://Loic760/microwakeword-keywords/models/koo_pah/koo_pah.json@main
+          - model: https://raw.githubusercontent.com/Loic760/microwakeword-keywords/main/models/koo_pah/koo_pah.json
             probability_cutoff: 90%
             sliding_window_size: 5
 
