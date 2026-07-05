@@ -6,13 +6,15 @@ Personal microWakeWord model collection for ESPHome.
 
 | Wake word | Manifest | ESPHome model line |
 | --- | --- | --- |
+| Hey Gabbie | `models/hey_gabbie/hey_gabbie.json` | `- model: github://Loic760/microwakeword-keywords/models/hey_gabbie/hey_gabbie.json@main` |
 | Koo Pah | `models/koo_pah/koo_pah.json` | `- model: github://Loic760/microwakeword-keywords/models/koo_pah/koo_pah.json@main` |
 
 ## ESPHome Usage
 
-If your ESPHome YAML already has a `micro_wake_word:` block, add this line under `models:`:
+If your ESPHome YAML already has a `micro_wake_word:` block, add one or more of these lines under `models:`:
 
 ```yaml
+    - model: github://Loic760/microwakeword-keywords/models/hey_gabbie/hey_gabbie.json@main
     - model: github://Loic760/microwakeword-keywords/models/koo_pah/koo_pah.json@main
 ```
 
@@ -21,15 +23,17 @@ Full minimal block:
 ```yaml
 micro_wake_word:
   models:
+    - model: github://Loic760/microwakeword-keywords/models/hey_gabbie/hey_gabbie.json@main
     - model: github://Loic760/microwakeword-keywords/models/koo_pah/koo_pah.json@main
 ```
 
 Do not use a normal GitHub `blob` page URL. ESPHome supports the `github://` shorthand above and full raw URLs.
 
-The full raw URL is:
+The full raw URLs are:
 
 ```text
 https://raw.githubusercontent.com/Loic760/microwakeword-keywords/main/models/koo_pah/koo_pah.json
+https://raw.githubusercontent.com/Loic760/microwakeword-keywords/main/models/hey_gabbie/hey_gabbie.json
 ```
 
 ## Collection Layout
@@ -38,6 +42,9 @@ Each wake word lives in its own folder:
 
 ```text
 models/
+  hey_gabbie/
+    hey_gabbie.json
+    hey_gabbie.tflite
   koo_pah/
     koo_pah.json
     koo_pah.tflite
